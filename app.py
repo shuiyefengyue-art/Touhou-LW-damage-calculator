@@ -51,7 +51,7 @@ def crifactor(a_firstbuff,e_firstbuff,a_firstbuffeter,e_firstbuffeter,a_secondbu
     if raw1buff < -10:
         buff1 = -10 + (raw1buff + 10) / 3
     elif -10 <= raw1buff <= 10:
-        buff1 = rawbuff1
+        buff1 = raw1buff
     else:
         buff1 = 10 + (raw1buff - 10) / 3
     
@@ -77,7 +77,7 @@ def accfactor(a_firstbuff,e_firstbuff,a_firstbuffeter,e_firstbuffeter,a_secondbu
     if raw1buff < -10:
         buff1 = -10 + (raw1buff + 10) / 3
     elif -10 <= raw1buff <= 10:
-        buff1 = rawbuff1
+        buff1 = raw1buff
     else:
         buff1 = 10 + (raw1buff - 10) / 3
     
