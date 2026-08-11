@@ -47,9 +47,15 @@ def statusfactor(firstbuff,firstbuffeter,secondbuff):
 
 # CRI攻撃計算
 def crifactor(a_firstbuff,e_firstbuff,a_firstbuffeter,e_firstbuffeter,a_secondbuff,e_secondbuff):
-    buff1 = max(-10, min(10, a_firstbuff - e_firstbuff + a_firstbuffeter - e_firstbuffeter))
-
-    buff2 = a_secondbuff - e_secondbuff
+    raw1buff = max(-10, min(10, a_firstbuff - e_firstbuff)) + max(-10, min(10, a_firstbuffeter - e_firstbuffeter))
+    if raw1buff < -10:
+        buff1 = -10 + (raw1buff + 10) / 3
+    elif -10 <= raw1buff <= 10:
+        buff1 = rawbuff1
+    else:
+        buff1 = 10 + (raw1buff - 10) / 3
+    
+    buff2 = max(-10, min(10, a_secondbuff - e_secondbuff))
 
 
     if buff1 < 0:
@@ -67,11 +73,17 @@ def crifactor(a_firstbuff,e_firstbuff,a_firstbuffeter,e_firstbuffeter,a_secondbu
 
 # 命中系計算
 def accfactor(a_firstbuff,e_firstbuff,a_firstbuffeter,e_firstbuffeter,a_secondbuff,e_secondbuff):
-    buff1 = max(-10, min(10, a_firstbuff - e_firstbuff + a_firstbuffeter - e_firstbuffeter))
+    raw1buff = max(-10, min(10, a_firstbuff - e_firstbuff)) + max(-10, min(10, a_firstbuffeter - e_firstbuffeter))
+    if raw1buff < -10:
+        buff1 = -10 + (raw1buff + 10) / 3
+    elif -10 <= raw1buff <= 10:
+        buff1 = rawbuff1
+    else:
+        buff1 = 10 + (raw1buff - 10) / 3
+    
+    buff2 = max(-10, min(10, a_secondbuff - e_secondbuff))
 
-    buff2 = a_secondbuff - e_secondbuff
-
-
+    
     if buff1 < 0:
         buff1factor = 1 / (1 + 0.2 * (-buff1))
     else:
