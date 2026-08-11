@@ -1494,3 +1494,42 @@ if st.button("ダメージを計算", type="primary"):
                         )
 
             st.divider()
+
+
+# ===== 計算要素の確認 =====
+if st.button("計算要素を確認"):
+    if not st.session_state.enemies:
+        st.warning("敵を1体以上追加してください。")
+    elif not st.session_state.bullets:
+        st.warning("バレットを1段以上追加してください。")
+    else:
+        st.header("計算要素の確認")
+        for ei, enemy in enumerate(st.session_state.enemies, 1):
+            st.subheader(f"敵 {ei}")
+            for bi, bullet in enumerate(st.session_state.bullets, 1):
+
+                debug = dmg_results[(ei, bi)]
+
+                with st.expander(f"{bi}段目"):
+
+                    st.write(f"b_power = {debug['b_power']}")
+                    st.write(f"atk = {debug['atk']}")
+                    st.write(f"agi = {debug['agi']}")
+                    st.write(f"slice = {debug['slice']}%")
+                    st.write(f"a_def = {debug['a_def']}")
+                    st.write(f"hard = {debug['hard']}%")
+                    st.write(f"e_def = {debug['e_def']}")
+                    st.write(f"a_lv = {debug['a_lv']}")
+                    st.write(f"e_lv = {debug['e_lv']}")
+                    st.write(f"s_lv = {debug['s_lv']}%")
+                    st.write(f"affinity = {debug['affinity']}")
+                    st.write(f"typebonus = {debug['typebonus']}")
+                    st.write(f"elementbonus = {debug['elementbonus']}")
+                    st.write(f"cut = {debug['cut']}")
+                    st.write(f"criatk = {debug['criatk']}")
+                    st.write(f"tunk = {debug['tunk']}")
+                    st.write(f"resdmg = {debug['resdmg']}%")
+                    st.write(f"zondmg = {debug['zondmg']}%")
+                    st.write(f"distribution = {debug['distribution']}")
+                    st.write(f"solo = {debug['solo']}")
+                    st.write(f"turn = {debug['turn']}")
