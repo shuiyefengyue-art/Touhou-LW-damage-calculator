@@ -24,7 +24,7 @@ def statusfactor(firstbuff,firstbuffeter,secondbuff):
     raw1buff = firstbuff + firstbuffeter
     if raw1buff < -10:
         buff1 = -10 + (raw1buff + 10) / 3
-    elif -10 <= raw1buff <= 10:
+    elif raw1buff <= 10:
         buff1 = raw1buff
     else:
         buff1 = 10 + (raw1buff - 10) / 3
@@ -50,7 +50,7 @@ def crifactor(a_firstbuff,e_firstbuff,a_firstbuffeter,e_firstbuffeter,a_secondbu
     raw1buff = max(-10, min(10, a_firstbuff - e_firstbuff)) + max(-10, min(10, a_firstbuffeter - e_firstbuffeter))
     if raw1buff < -10:
         buff1 = -10 + (raw1buff + 10) / 3
-    elif -10 <= raw1buff <= 10:
+    elif raw1buff <= 10:
         buff1 = raw1buff
     else:
         buff1 = 10 + (raw1buff - 10) / 3
@@ -76,7 +76,7 @@ def accfactor(a_firstbuff,e_firstbuff,a_firstbuffeter,e_firstbuffeter,a_secondbu
     raw1buff = max(-10, min(10, a_firstbuff - e_firstbuff)) + max(-10, min(10, a_firstbuffeter - e_firstbuffeter))
     if raw1buff < -10:
         buff1 = -10 + (raw1buff + 10) / 3
-    elif -10 <= raw1buff <= 10:
+    elif raw1buff <= 10:
         buff1 = raw1buff
     else:
         buff1 = 10 + (raw1buff - 10) / 3
