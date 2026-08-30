@@ -1422,6 +1422,7 @@ for ei, enemy in enumerate(st.session_state.enemies, 1):
                 * result["solofactor"]
                 / (1 + turnfactor) 
                 * result["criacc"] / 100
+                * 0.995
                 )
                 + (
                     result["b_power"]
