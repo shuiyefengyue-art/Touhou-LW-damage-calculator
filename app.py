@@ -1324,28 +1324,51 @@ for ei, enemy in enumerate(st.session_state.enemies, 1):
 
 
         # 各バレットダメージ(理論値)
-        maxdmg = (
-            result["b_power"]
-            * (
-                atk
-                + a_agi * bullet["slice"] / 100
-                + sdef * bullet["hard"] / 100
+        if result["criacc"] != 0:
+            maxdmg = (
+                result["b_power"]
+                * (
+                    atk
+                    + a_agi * bullet["slice"] / 100
+                    + sdef * bullet["hard"] / 100
+                )
+                / edef
+                * a_lv * 100 / enemy["lv"]
+                * 0.4
+                * (1 + spell_lv / 100)
+                * result["affinity"]
+                * (1 + result["typebonus"] + result["elementbonus"])
+                * (1 - result["dmgcut"])
+                * result["criatk"]
+                * a_tunk
+                * (1 + a_resdmg / 100)
+                * (1 + a_zondmg / 100)
+                * result["distribution"]
+                * result["solofactor"]
+                / (1 + turnfactor)
             )
-            / edef
-            * a_lv * 100 / enemy["lv"]
-            * 0.4
-            * (1 + spell_lv / 100)
-            * result["affinity"]
-            * (1 + result["typebonus"] + result["elementbonus"])
-            * (1 - result["dmgcut"])
-            * result["criatk"]
-            * a_tunk
-            * (1 + a_resdmg / 100)
-            * (1 + a_zondmg / 100)
-            * result["distribution"]
-            * result["solofactor"]
-            / (1 + turnfactor)
-        )
+        elif:
+            maxdmg = (
+                result["b_power"]
+                * (
+                    atk
+                    + a_agi * bullet["slice"] / 100
+                    + sdef * bullet["hard"] / 100
+                )
+                / edef
+                * a_lv * 100 / enemy["lv"]
+                * 0.4
+                * (1 + spell_lv / 100)
+                * result["affinity"]
+                * (1 + result["typebonus"] + result["elementbonus"])
+                * (1 - result["dmgcut"])
+                * a_tunk
+                * (1 + a_resdmg / 100)
+                * (1 + a_zondmg / 100)
+                * result["distribution"]
+                * result["solofactor"]
+                / (1 + turnfactor)
+            )
 
         # 各バレットダメージ（最低値）
         if result["criacc"] == 100:
