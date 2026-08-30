@@ -1347,7 +1347,7 @@ for ei, enemy in enumerate(st.session_state.enemies, 1):
                 * result["solofactor"]
                 / (1 + turnfactor)
             )
-        elif:
+        else:
             maxdmg = (
                 result["b_power"]
                 * (
@@ -1399,11 +1399,52 @@ for ei, enemy in enumerate(st.session_state.enemies, 1):
 
         # 各バレットダメージ(期待値)
         expdmg = (
-            (
-                maxdmg * result["criacc"] / 100
-                 + mindmg * (100 - result["criacc"]) / 100
-            )
-            * 0.995
+                (
+                    result["b_power"]
+                * (
+                    atk
+                    + a_agi * bullet["slice"] / 100
+                    + sdef * bullet["hard"] / 100
+                )
+                / edef
+                * a_lv * 100 / enemy["lv"]
+                * 0.4
+                * (1 + spell_lv / 100)
+                * result["affinity"]
+                * (1 + result["typebonus"] + result["elementbonus"])
+                * (1 - result["dmgcut"])
+                * result["criatk"]
+                * a_tunk
+                * (1 + a_resdmg / 100)
+                * (1 + a_zondmg / 100)
+                * result["distribution"]
+                * result["solofactor"]
+                / (1 + turnfactor) 
+                * result["criacc"] / 100
+                )
+                + (
+                    result["b_power"]
+                * (
+                    atk
+                    + a_agi * bullet["slice"] / 100
+                    + sdef * bullet["hard"] / 100
+                )
+                / edef
+                * a_lv * 100 / enemy["lv"]
+                * 0.4
+                * (1 + spell_lv / 100)
+                * result["affinity"]
+                * (1 + result["typebonus"] + result["elementbonus"])
+                * (1 - result["dmgcut"])
+                * a_tunk
+                * (1 + a_resdmg / 100)
+                * (1 + a_zondmg / 100)
+                * result["distribution"]
+                * result["solofactor"]
+                / (1 + turnfactor) 
+                * (100 - result["criacc"]) / 100
+                * 0.995
+                )
         )
 
         maxdamage = maxdmg * bullet["numbers"]
@@ -1475,7 +1516,7 @@ if st.button("ダメージを計算", type="primary"):
             st.metric("最大(乱数は1.00)", f"{all_max:,.0f}")
 
         with col2:
-            st.metric("期待値(乱数は0.995)", f"{all_exp:,.0f}")
+            st.metric("期待値", f"{all_exp:,.0f}")
 
         with col3:
             st.metric("最低(乱数は0.99)", f"{all_min:,.0f}")
