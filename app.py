@@ -15,8 +15,8 @@ t = turn_input.run()
 
 st.header("使用スペカ情報")
 with st.container(height=450):
-    from input import spellcard_input
-    s = spellcard_input.run()
+    from input import spellcard_input_updated
+    s = spellcard_input_updated.run()
 
 left_col, right_col = st.columns(2)
 
