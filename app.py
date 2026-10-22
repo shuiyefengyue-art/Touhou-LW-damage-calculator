@@ -39,6 +39,10 @@ d = daikekkai_input.run()
 
 
 #結果(要素)
+if not s["bullets"]:
+    st.info("先にバレットを1段以上追加してください。")
+    st.stop()
+
 from result import turn_result
 turn = turn_result.t_result(t)
 
