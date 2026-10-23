@@ -125,12 +125,14 @@ def run():
     if st.session_state["selected_lastword"] not in lastword_names:
         st.session_state["selected_lastword"] = MANUAL_INPUT
 
-    st.selectbox(
-        "ラストワード名",
-        options=lastword_names,
-        key="selected_lastword",
-        on_change=load_selected_lastword
-    )
+    with st.container(height=250, border=True):
+        st.radio(
+            "ラストワード名",
+            options=lastword_names,
+            key="selected_lastword",
+            on_change=load_selected_lastword,
+            label_visibility="collapsed",
+        )
 
     spell["soloall"] = st.selectbox(
         "単体or全体",
