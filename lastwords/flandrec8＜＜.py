@@ -68,7 +68,7 @@ DATA = {
             "slice": 0,
             "hard": 0,
             "numbers": 5,
-            "type": "光弾",
+            "type": "尖弾",
             "element": "金",
             "yangyin": "陰気",
             "criaccupper": [],
