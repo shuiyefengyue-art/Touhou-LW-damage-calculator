@@ -18,6 +18,14 @@ def a_result(a,d):
             1
             + a["zonagi"] / 100
         )
+        * (
+            1
+            + a["uniyangatk"] / 100
+        )
+        * (
+            1
+            + a["budyangatk"] / 100
+        )
     )
 
     # 陽攻
@@ -28,6 +36,14 @@ def a_result(a,d):
         )
         * 0.875 ** a["poison"]
         * function.statusfactor(a["yangatkbuff"],a["yangatkbuffeter"],a["yangatk2buff"])
+        * (
+            1
+            + a["uniagi"] / 100
+        )
+        * (
+            1
+            + a["budagi"] / 100
+        )
     )
 
     if d == "早苗":
@@ -59,6 +75,8 @@ def a_result(a,d):
 
     if d == "神奈子":
         a_yangdef *= 1.3
+    elif d == "白蓮":
+        a_yangdef *= 1.45
 
     # 陰防
     a_yindef = (

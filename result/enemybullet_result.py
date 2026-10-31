@@ -37,6 +37,8 @@ def es_bs_result(s,es,a,d):
 
         if d == "神奈子":
             e_yangdef *= 0.7
+        elif d == "白蓮":
+            e_yangdef *= 0.55
 
         # 陰防
         e_yindef = (

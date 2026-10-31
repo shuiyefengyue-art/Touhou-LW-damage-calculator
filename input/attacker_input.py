@@ -64,7 +64,11 @@ def run():
         "zoncridmg": 0,
         "zonagi": 0,
         "zoncriacc": 0,
-        "zondmg": 0
+        "zondmg": 0,
+        "uniagi": 0,
+        "uniyangatk": 0,
+        "budagi": 0,
+        "budyangatk": 0
     }
 
     with st.container(height=450):
@@ -489,6 +493,30 @@ def run():
             "ゾーン(ダメージアップ)(%)",
             min_value=0,
             value=attacker["zondmg"]
+        )
+
+        attacker["uniagi"] = st.number_input(
+            "団結(速力)(%)",
+            min_value=0,
+            value=attacker["uniagi"]
+        )
+
+        attacker["uniyangatk"] = st.number_input(
+            "団結(陽攻)(%)",
+            min_value=0,
+            value=attacker["uniyangatk"]
+        )
+
+        attacker["budagi"] = st.number_input(
+            "バディコネクト(速力)(%)",
+            min_value=0,
+            value=attacker["budagi"]
+        )
+        
+        attacker["budyangatk"] = st.number_input(
+            "バディコネクト(陽攻)(%)",
+            min_value=0,
+            value=attacker["budyangatk"]
         )
 
 
