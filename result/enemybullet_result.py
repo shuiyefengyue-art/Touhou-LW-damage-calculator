@@ -133,7 +133,7 @@ def es_bs_result(s,es,a,d):
                         + a["zoncriacc"]
                     )
                     * function.accfactor(a["criaccbuff"],e["criavobuff"],a["criaccbuffeter"],e["criavobuffeter"],a["criacc2buff"],e["criavo2buff"])
-                    + + criacc_bonus
+                    + criacc_bonus
                 )
             )
 
