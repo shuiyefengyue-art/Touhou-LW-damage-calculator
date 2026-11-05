@@ -131,9 +131,9 @@ def es_bs_result(s,es,a,d):
                         b_rawcriacc
                         + a["rescriacc"]
                         + a["zoncriacc"]
-                        + criacc_bonus
                     )
                     * function.accfactor(a["criaccbuff"],e["criavobuff"],a["criaccbuffeter"],e["criavobuffeter"],a["criacc2buff"],e["criavo2buff"])
+                    + + criacc_bonus
                 )
             )
 
