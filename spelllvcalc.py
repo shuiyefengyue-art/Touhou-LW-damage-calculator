@@ -1,47 +1,47 @@
-NAME = "A16æ隠岐奈:ノーシーズン・マターラカーラ"
+NAME = "C3<磨弓:私が袿姫様の作った衣装を一番可愛く着れるんです"
 
 DATA = {
     "soloall": "全体",
-    "lv": 30,
+    "lv": 28,
 
     "bullets": [
         # 1段目
         {
-            "power": 3.39,
+            "power": 3.68,
             "rawcriacc": 10,
-            "slice": 200,
-            "hard": 200,
-            "numbers": 29,
-            "type": "光弾",
-            "element": "火",
+            "slice": 220,
+            "hard": 0,
+            "numbers": 32,
+            "type": "尖弾",
+            "element": "土",
             "yangyin": "陽気",
-            "criaccupper": ["精密弾"],
+            "criaccupper": ["弾性弾"],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
         # 2段目
         {
-            "power": 7.85,
-            "rawcriacc": 10,
+            "power": 6.44,
+            "rawcriacc": 13,
             "slice": 0,
             "hard": 0,
             "numbers": 5,
-            "type": "光弾",
-            "element": "金",
+            "type": "尖弾",
+            "element": "土",
             "yangyin": "陽気",
-            "criaccupper": ["精密弾"],
+            "criaccupper": ["弾性弾"],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
         # 3段目
         {
-            "power": 9.16,
-            "rawcriacc": 10,
-            "slice": 0,
+            "power": 7.38,
+            "rawcriacc": 13,
+            "slice": 160,
             "hard": 0,
-            "numbers": 5,
-            "type": "光弾",
-            "element": "金",
+            "numbers": 4,
+            "type": "尖弾",
+            "element": "土",
             "yangyin": "陽気",
             "criaccupper": [],
             "mirror": "いいえ",
@@ -49,55 +49,55 @@ DATA = {
         },
         # 4段目
         {
-            "power": 10.47,
-            "rawcriacc": 10,
-            "slice": 200,
+            "power": 9.28,
+            "rawcriacc": 15,
+            "slice": 0,
             "hard": 0,
-            "numbers": 5,
-            "type": "光弾",
-            "element": "火",
+            "numbers": 3,
+            "type": "尖弾",
+            "element": "土",
             "yangyin": "陽気",
-            "criaccupper": ["精密弾"],
+            "criaccupper": ["弾性弾"],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
         # 5段目
         {
-            "power": 11.78,
-            "rawcriacc": 10,
-            "slice": 0,
-            "hard": 200,
-            "numbers": 5,
-            "type": "光弾",
-            "element": "火",
+            "power": 25.04,
+            "rawcriacc": 15,
+            "slice": 160,
+            "hard": 0,
+            "numbers": 1,
+            "type": "尖弾",
+            "element": "土",
             "yangyin": "陽気",
-            "criaccupper": [],
+            "criaccupper": ["弾性弾"],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
         # 6段目
         {
-            "power": 13.09,
-            "rawcriacc": 10,
-            "slice": 200,
-            "hard": 200,
-            "numbers": 5,
-            "type": "光弾",
-            "element": "火",
+            "power": 22.59,
+            "rawcriacc": 20,
+            "slice": 240,
+            "hard": 0,
+            "numbers": 1,
+            "type": "尖弾",
+            "element": "土",
             "yangyin": "陽気",
-            "criaccupper": ["精密弾"],
+            "criaccupper": [],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
     ],
 
-    "card_type_buffs": [("光弾", 50)],
-    "card_element_buffs": [("火", 50)]
+    "card_type_buffs": [("尖弾", 50)],
+    "card_element_buffs": [("土", 50), ("星", 50)]
 }
 
 
 for bi, bullet in enumerate(DATA["bullets"]):
-    bullet["rawacc"] = [80, 80, 80, 80, 80, 80][bi]
+    bullet["rawacc"] = [100, 95, 95, 90, 90, 85][bi]
 
 
 lawcp = (
