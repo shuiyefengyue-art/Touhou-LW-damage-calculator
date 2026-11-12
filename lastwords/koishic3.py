@@ -91,6 +91,6 @@ DATA = {
         },
     ],
 
-    "card_type_buffs": [("質量弾", 50)],
+    "card_type_buffs": [("質量弾", 50), ("肉弾", 50)],
     "card_element_buffs": [("星", 50)]
 }
