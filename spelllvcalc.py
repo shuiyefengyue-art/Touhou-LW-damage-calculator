@@ -1,19 +1,19 @@
-NAME = "C3<磨弓:私が袿姫様の作った衣装を一番可愛く着れるんです"
+NAME = "C3<龍:大天狗様がこんなところで油を売っているわけがない"
 
 DATA = {
     "soloall": "全体",
-    "lv": 28,
+    "lv": 32,
 
     "bullets": [
         # 1段目
         {
-            "power": 3.68,
+            "power": 5.17,
             "rawcriacc": 10,
-            "slice": 220,
+            "slice": 260,
             "hard": 0,
-            "numbers": 32,
+            "numbers": 27,
             "type": "尖弾",
-            "element": "土",
+            "element": "星",
             "yangyin": "陽気",
             "criaccupper": ["弾性弾"],
             "mirror": "いいえ",
@@ -21,41 +21,41 @@ DATA = {
         },
         # 2段目
         {
-            "power": 6.44,
-            "rawcriacc": 13,
+            "power": 6.86,
+            "rawcriacc": 15,
             "slice": 0,
             "hard": 0,
-            "numbers": 5,
-            "type": "尖弾",
-            "element": "土",
-            "yangyin": "陽気",
-            "criaccupper": ["弾性弾"],
-            "mirror": "いいえ",
-            "penetrate": "いいえ",
-        },
-        # 3段目
-        {
-            "power": 7.38,
-            "rawcriacc": 13,
-            "slice": 160,
-            "hard": 0,
-            "numbers": 4,
-            "type": "尖弾",
-            "element": "土",
+            "numbers": 6,
+            "type": "レーザー弾",
+            "element": "星",
             "yangyin": "陽気",
             "criaccupper": [],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
+        # 3段目
+        {
+            "power": 7.79,
+            "rawcriacc": 25,
+            "slice": 180,
+            "hard": 0,
+            "numbers": 5,
+            "type": "尖弾",
+            "element": "星",
+            "yangyin": "陽気",
+            "criaccupper": ["弾性弾"],
+            "mirror": "いいえ",
+            "penetrate": "いいえ",
+        },
         # 4段目
         {
-            "power": 9.28,
-            "rawcriacc": 15,
+            "power": 7.79,
+            "rawcriacc": 25,
             "slice": 0,
             "hard": 0,
-            "numbers": 3,
-            "type": "尖弾",
-            "element": "土",
+            "numbers": 5,
+            "type": "レーザー弾",
+            "element": "星",
             "yangyin": "陽気",
             "criaccupper": ["弾性弾"],
             "mirror": "いいえ",
@@ -63,13 +63,13 @@ DATA = {
         },
         # 5段目
         {
-            "power": 25.04,
-            "rawcriacc": 15,
-            "slice": 160,
+            "power": 9.74,
+            "rawcriacc": 25,
+            "slice": 180,
             "hard": 0,
-            "numbers": 1,
+            "numbers": 4,
             "type": "尖弾",
-            "element": "土",
+            "element": "星",
             "yangyin": "陽気",
             "criaccupper": ["弾性弾"],
             "mirror": "いいえ",
@@ -77,13 +77,13 @@ DATA = {
         },
         # 6段目
         {
-            "power": 22.59,
-            "rawcriacc": 20,
-            "slice": 240,
+            "power": 8.35,
+            "rawcriacc": 50,
+            "slice": 260,
             "hard": 0,
-            "numbers": 1,
+            "numbers": 4,
             "type": "尖弾",
-            "element": "土",
+            "element": "星",
             "yangyin": "陽気",
             "criaccupper": [],
             "mirror": "いいえ",
@@ -97,7 +97,7 @@ DATA = {
 
 
 for bi, bullet in enumerate(DATA["bullets"]):
-    bullet["rawacc"] = [100, 95, 95, 90, 90, 85][bi]
+    bullet["rawacc"] = [75, 73, 71, 71, 71, 69][bi]
 
 
 lawcp = (
