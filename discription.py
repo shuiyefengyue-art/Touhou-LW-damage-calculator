@@ -1,7 +1,7 @@
 import streamlit as st
 
 def run():
-    st.title("東方ロストワード ダメージ計算機")
+    st.title("東方ロストワード ダメージ計算")
     st.write("by オマーン国際空港")
     st.write("最終更新日: 2026/10/27 ")
 
