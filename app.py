@@ -1,7 +1,10 @@
 import streamlit as st
 
-st.set_page_config(layout="wide")
-
+st.set_page_config(
+    page_title="東方ロストワード ダメージ計算",
+    page_icon="⚔️",
+    layout="wide"
+)
 
 # 説明
 import discription
