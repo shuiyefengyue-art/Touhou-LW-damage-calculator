@@ -1,4 +1,4 @@
-NAME = "L10.1妖夢:半人前の待宵反射発表会"
+NAME = "LM1マエリベリー&夢美:夢の如く美しき非統一魔法世界"
 
 DATA = {
     "soloall": "全体",
@@ -7,13 +7,13 @@ DATA = {
     "bullets": [
         # 1段目
         {
-            "power": 3.99,
-            "rawcriacc": 8,
-            "slice": 180,
+            "power": 5.59,
+            "rawcriacc": 10,
+            "slice": 220,
             "hard": 0,
-            "numbers": 26,
-            "type": "エネルギー弾",
-            "element": "星",
+            "numbers": 25,
+            "type": "光弾",
+            "element": "火",
             "yangyin": "陽気",
             "criaccupper": [],
             "mirror": "いいえ",
@@ -21,55 +21,55 @@ DATA = {
         },
         # 2段目
         {
-            "power": 7.39,
+            "power": 8.38,
             "rawcriacc": 10,
-            "slice": 100,
+            "slice": 0,
             "hard": 0,
             "numbers": 5,
-            "type": "エネルギー弾",
-            "element": "星",
+            "type": "光弾",
+            "element": "火",
             "yangyin": "陽気",
-            "criaccupper": [],
+            "criaccupper": ["精密弾", "弾性弾"],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
         # 3段目
         {
-            "power": 10.85,
-            "rawcriacc": 15,
-            "slice": 0,
+            "power": 8.38,
+            "rawcriacc": 10,
+            "slice": 200,
             "hard": 0,
-            "numbers": 4,
-            "type": "エネルギー弾",
-            "element": "金",
-            "yangyin": "陽気",
-            "criaccupper": ["爆破弾"],
-            "mirror": "いいえ",
-            "penetrate": "いいえ",
-        },
-        # 4段目
-        {
-            "power": 11.69,
-            "rawcriacc": 15,
-            "slice": 100,
-            "hard": 0,
-            "numbers": 4,
-            "type": "エネルギー弾",
-            "element": "星",
+            "numbers": 5,
+            "type": "光弾",
+            "element": "火",
             "yangyin": "陽気",
             "criaccupper": [],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
+        # 4段目
+        {
+            "power": 10.47,
+            "rawcriacc": 10,
+            "slice": 200,
+            "hard": 0,
+            "numbers": 4,
+            "type": "光弾",
+            "element": "火",
+            "yangyin": "陽気",
+            "criaccupper": ["精密弾"],
+            "mirror": "いいえ",
+            "penetrate": "いいえ",
+        },
         # 5段目
         {
-            "power": 17.14,
-            "rawcriacc": 20,
-            "slice": 0,
+            "power": 10.47,
+            "rawcriacc": 10,
+            "slice": 150,
             "hard": 0,
-            "numbers": 3,
+            "numbers": 4,
             "type": "エネルギー弾",
-            "element": "金",
+            "element": "火",
             "yangyin": "陽気",
             "criaccupper": [],
             "mirror": "いいえ",
@@ -77,27 +77,27 @@ DATA = {
         },
         # 6段目
         {
-            "power": 18.29,
-            "rawcriacc": 20,
-            "slice": 180,
+            "power": 11.22,
+            "rawcriacc": 10,
+            "slice": 220,
             "hard": 0,
-            "numbers": 3,
-            "type": "エネルギー弾",
-            "element": "星",
+            "numbers": 4,
+            "type": "光弾",
+            "element": "火",
             "yangyin": "陽気",
-            "criaccupper": ["爆破弾"],
+            "criaccupper": ["精密弾"],
             "mirror": "いいえ",
             "penetrate": "いいえ",
         },
     ],
 
-    "card_type_buffs": [("エネルギー弾", 50)],
-    "card_element_buffs": [("星", 50)]
+    "card_type_buffs": [("光弾", 50)],
+    "card_element_buffs": [("火", 50)]
 }
 
 
 for bi, bullet in enumerate(DATA["bullets"]):
-    bullet["rawacc"] = [90, 85, 75, 75, 70, 70][bi]
+    bullet["rawacc"] = [75, 75, 75, 75, 75, 70][bi]
 
 
 lawcp = (
