@@ -91,6 +91,6 @@ DATA = {
         },
     ],
 
-    "card_type_buffs": [("レーザー弾", 50)],
+    "card_type_buffs": [("光弾", 50), ("レーザー弾", 50)],
     "card_element_buffs": [("星", 50)]
 }
