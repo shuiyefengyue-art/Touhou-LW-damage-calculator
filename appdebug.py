@@ -24,8 +24,8 @@ with left_col:
     st.header("敵側の状態")
     st.write("デバフはマイナスで入力することに注意してください。")
 
-    from input import enemy_input
-    es = enemy_input.run()
+    from input import enemy_input_updated
+    es = enemy_input_updated.run()
 
 with right_col:
     st.header("攻撃側の状態")

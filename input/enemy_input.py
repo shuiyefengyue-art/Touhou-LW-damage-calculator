@@ -135,6 +135,7 @@ def run():
                 enemy["fullbreak"] = st.selectbox(
                     "fullbreak状態?",
                     lists.yesnos,
+                    index=lists.yesnos.index(enemy["fullbreak"]),
                     key=f"enemy_{i}_fullbreak"
                 )
 
@@ -360,10 +361,12 @@ def run():
                 st.subheader("弾種カット")
 
                 for j, bullet_type in enumerate(lists.types):
+                    default_value = dict(enemy["type_cuts"]).get(bullet_type, 0)
+
                     value = st.number_input(
                         f"{bullet_type}(%)",
                         min_value=0,
-                        value=0,
+                        value=default_value,
                         key=f"e_{i}_type_cuts_{j}"
                     )
                     if value != 0:
@@ -375,10 +378,12 @@ def run():
                 st.subheader("属性カット")
 
                 for j, bullet_element in enumerate(lists.elements):
+                    default_value = dict(enemy["element_cuts"]).get(bullet_element, 0)
+
                     value = st.number_input(
                         f"{bullet_element}(%)",
                         min_value=0,
-                        value=0,
+                        value=default_value,
                         key=f"e_{i}_element_cuts_{j}"
                     )
                     if value != 0:
