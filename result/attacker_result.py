@@ -46,7 +46,7 @@ def a_result(a,d):
         )
         * (
             1
-            + a["conyangatk"]
+            + a["conyangatk"] / 100
         )
     )
 
