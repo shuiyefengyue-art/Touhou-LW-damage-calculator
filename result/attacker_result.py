@@ -77,7 +77,7 @@ def a_result(a,d):
         * function.statusfactor(a["yangdefbuff"],a["yangdefbuffeter"],a["yangdef2buff"])
         *(
             1
-            + a["conyangdef"]
+            + a["conyangdef"] 100
         )
     )
 
