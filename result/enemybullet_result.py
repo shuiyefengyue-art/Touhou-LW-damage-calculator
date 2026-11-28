@@ -109,7 +109,7 @@ def es_bs_result(s,es,a,d):
                 b_power
                 * (
                     1
-                    + a["conpower"]
+                    + a["conpower"] /100
                 )
             )
 
