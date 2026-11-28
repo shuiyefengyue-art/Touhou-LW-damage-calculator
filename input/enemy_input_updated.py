@@ -120,7 +120,7 @@ def run():
 
             st.rerun()
 
-    enemy_names = [MANUAL_INPUT] + sorted(get_enemies().keys())
+    enemy_names = [MANUAL_INPUT] + sorted(get_enemies().keys(), reverse=True)
 
     for i, enemy in enumerate(st.session_state.enemies):
         with st.expander(f"敵 {i + 1}", expanded=False):
