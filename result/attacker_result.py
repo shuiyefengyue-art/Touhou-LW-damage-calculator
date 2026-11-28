@@ -38,11 +38,15 @@ def a_result(a,d):
         * function.statusfactor(a["yangatkbuff"],a["yangatkbuffeter"],a["yangatk2buff"])
         * (
             1
-            + a["uniagi"] / 100
+            + a["uniyangatk"] / 100
         )
         * (
             1
-            + a["budagi"] / 100
+            + a["budyangatk"] / 100
+        )
+        * (
+            1
+            + a["conyangatk"]
         )
     )
 
@@ -71,6 +75,10 @@ def a_result(a,d):
         )
         * 0.875 ** a["poison"]
         * function.statusfactor(a["yangdefbuff"],a["yangdefbuffeter"],a["yangdef2buff"])
+        *(
+            1
+            + a["conyangdef"]
+        )
     )
 
     if d == "神奈子":

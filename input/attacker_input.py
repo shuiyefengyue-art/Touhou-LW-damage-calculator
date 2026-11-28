@@ -68,7 +68,10 @@ def run():
         "uniagi": 0,
         "uniyangatk": 0,
         "budagi": 0,
-        "budyangatk": 0
+        "budyangatk": 0,
+        "conpower": 0,
+        "conyangatk": 0,
+        "conyangdef": 0
     }
 
     with st.container(height=450):
@@ -346,43 +349,43 @@ def run():
         )
 
         attacker["agiadd"] = st.number_input(
-            "速力蓄積の値(異種の「○○→速力」の合計。例:2818 * 0.7 + 2656 * 0.2 = 2503.8)",
+            "蓄積(速力)(異種の「○○→速力」の合計。例:2818 * 0.7 + 2656 * 0.2 = 2503.8)",
             min_value=0,
             value=attacker["agiadd"]
         )
 
         attacker["agirev"] = st.number_input(
-            "速力逆相の値",
+            "逆相(速力)",
             min_value=0,
             value=attacker["agirev"]
         )
 
         attacker["yangatkadd"] = st.number_input(
-            "陽攻蓄積の値",
+            "蓄積(陽攻)",
             min_value=0,
             value=attacker["yangatkadd"]
         )
 
         attacker["yinatkadd"] = st.number_input(
-            "陰攻蓄積の値",
+            "蓄積(陰攻)",
             min_value=0,
             value=attacker["yinatkadd"]
         )
 
         attacker["yinatkrev"] = st.number_input(
-            "陰攻逆相の値",
+            "逆相(陰攻)",
             min_value=0,
             value=attacker["yinatkrev"]
         )
 
         attacker["yangdefadd"] = st.number_input(
-            "陽防蓄積の値",
+            "蓄積(陽防)",
             min_value=0,
             value=attacker["yangdefadd"]
         )
 
         attacker["yindefadd"] = st.number_input(
-            "陰防蓄積の値",
+            "蓄積(陰防)",
             min_value=0,
             value=attacker["yindefadd"]
         )
@@ -430,19 +433,19 @@ def run():
         attacker["element_buffs"] = a_element_buffs
 
         attacker["HPtunk"] = st.number_input(
-            "HP蓄力の基礎倍率(%)",
+            "蓄力(HP)の基礎倍率(%)",
             min_value=0,
             value=attacker["HPtunk"]
         )
 
         attacker["powertunk"] = st.number_input(
-            "霊力蓄力の基礎倍率(%)",
+            "蓄力(霊力)の基礎倍率(%)",
             min_value=0,
             value=attacker["powertunk"]
         )
 
         attacker["grazetunk"] = st.number_input(
-            "結界蓄力の基礎倍率(%)",
+            "蓄力(結界)の基礎倍率(%)",
             min_value=0,
             value=attacker["grazetunk"]
         )
@@ -519,5 +522,22 @@ def run():
             value=attacker["budyangatk"]
         )
 
+        attacker["conpower"] = st.number_input(
+            "響奏(威力)(%)",
+            min_value=0,
+            value=attacker["conpower"]
+        )
+
+        attacker["conyangatk"] = st.number_input(
+            "響奏(陽攻)(%)",
+            min_value=0,
+            value=attacker["conyangatk"]
+        )
+
+        attacker["conyangdef"] = st.number_input(
+            "響奏(陽防)(%)",
+            min_value=0,
+            value=attacker["conyangdef"]
+        )
 
         return attacker

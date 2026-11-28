@@ -68,6 +68,10 @@ def es_bs_result(s,es,a,d):
                 1
                 + a["zoncridmg"] / 100
             )
+            * (
+                1
+                + e["concridef"] / 100
+            )
         )
 
         if d == "さとり":
@@ -101,8 +105,16 @@ def es_bs_result(s,es,a,d):
             b_power = b["power"]
             b_rawcriacc = b["rawcriacc"]
 
+            bullet_power = (
+                b_power
+                * (
+                    1
+                    + a["conpower"]
+                )
+            )
+
             if d == "諏訪子":
-                b_power *= 1.6
+                bullet_power *= 1.6
 
             if b["penetrate"] == "はい":
                 e_yangdef /= function.statusfactor(e_yangdefbuff,e["yangdefbuffeter"],e_yangdef2buff)
@@ -256,7 +268,7 @@ def es_bs_result(s,es,a,d):
                 "enemy_index": ei,
                 "bullet_index": bi,
                 "s_lv": s["lv"],
-                "power": b_power,
+                "power": bullet_power,
                 "slice": b["slice"],
                 "hard": b["hard"],
                 "numbers": b["numbers"],

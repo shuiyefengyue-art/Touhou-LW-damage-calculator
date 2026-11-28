@@ -40,6 +40,7 @@ def run():
             "criavo2buff": 0,
             "yangdefrev": 0,
             "yindefrev": 0,
+            "concridef": 0,
             "focusbuff": 0,
             "solobuff": 0,
             "favupbuff": 0,
@@ -289,17 +290,24 @@ def run():
                 )
 
                 enemy["yangdefrev"] = st.number_input(
-                    "陽防逆相(%)(例:C3アリス・マーガトロイドなら20)",
+                    "逆相(陽防)(%)(例:C3アリス・マーガトロイドなら20)",
                     min_value=0,
                     value=enemy["yangdefrev"],
                     key=f"enemy_{i}_yangdefrev"
                 )
 
                 enemy["yindefrev"] = st.number_input(
-                    "陰防逆相(%)(例:C8<<饕餮尤魔なら20)",
+                    "逆相(陰防)(例:C8<<饕餮尤魔なら20)",
                     min_value=0,
                     value=enemy["yindefrev"],
                     key=f"enemy_{i}_yindefrev"
+                )
+
+                enemy["concridef"] = st.number_input(
+                    "響奏(CRI防御)(%)(例:ZSTH-0001霧雨魔理沙なら10*6=60)",
+                    min_value=0,
+                    value=enemy["concridef"],
+                    key=f"enemy_{i}_concridef"
                 )
 
                 enemy["focusbuff"] = st.number_input(
